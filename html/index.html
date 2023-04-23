@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+<<<<<<< HEAD
+    <script src="../js/jquery-3.6.4.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+    <style>
+        [class*="col-"]{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        li{width: 160px;}
+    </style>
+
+    <script>
+      $(document).ready(function(){
+        $("#myBtn").click(function(){
+          $("#myModal").modal();
+        })
+        function kiemTraTen(){
+            var regTen = /(^[A-Z]{1}[a-z]+)(\s[A-Z]{1}[a-z]*)+$/;
+            var ht = $("#txtName").val();
+            if(regTen.test(ht) ==  true) {
+              alert("Nhap dung");
+            } else
+            {
+              alert("Nhap sai")
+            }
+        }
+        $("#txtName").blur(kiemTraTen);
+      })
+    </script>
+</head>
+<body>
+    <div class="container alert-danger">
+        <div class="row ">
+            <div class="col-3 col-md-3 alert-danger">
+                <img src="../img/Logo.jpg" alt="" style="background: alert-danger">
+
+            </div>
+
+            <div class="col-9 col-md-9 text-md-center">
+                <h3>TRUONG DAI HOC CONG NGHIEP THANH PHO HO CHI MINH</h3>
+                <H5>KHOA CONG NGHE THONG TIN</H5>
+            </div>
+        </div>
+    </div>
+
+    <div class="row ">
+        <ul class="navbar-nav text-center bg-dark navbar-expand-md navbar-collapse">
+            <li class="nav-item"><a href="#" class="nav-link text-center text-white">Home</a></li>
+            <li class="nav-item"><a href="#" id="myBtn" class="nav-link text-center text-white">Services</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-center text-white">Contact</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-center text-white">About</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-center text-white">Help</a></li>
+        </ul>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-md-12">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                      </a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled">Disabled</a>
+                    </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+                </div>
+              </nav>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 text-center">
+            <h5>View</h5>
+            <hr>
+            <img src="../img/imgCenter.jpg" alt="" srcset="" width="100%">
+        </div>
+
+        <div class="col-md-8">
+            <h4>DANH SACH SINH VIEN</h4>
+            <table class="table table-active table-bordered table-hover table-primary">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Ho va Ten</th>
+                        <th>Ngay Sinh</th>
+                        <th>Que Quan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Tran A</td>
+                        <td>22/12/2002</td>
+                        <td>Vung Tau</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Van T</td>
+                        <td>23/05/2002</td>
+                        <td>Da Lat</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Tien D</td>
+                        <td>12/05/2002</td>
+                        <td>Binh Duong</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="modal fade" role="dialog" id="myModal" >
+            <div class="modal-dialog " role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Danh Sach</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post" class="form-group">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <label for="lblName">Ho Ten</label>
+                            </div>
+                            <div class="col-md-7">
+                                <input type="text" name="txtName" id="txtName">
+                            </div>
+                        </div>
+    
+                        <div class="row">
+                            `<div class="row">
+                                <div class="col-md-5">
+                                    <label for="lblName">Ngay Sinh: </label>
+                                </div>
+                                <div class="col-md-7">
+                                    <input type="text" name="txtNgaySinh" id="txtNgaySinh">
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+
+
+
+=======
+    <link rel="stylesheet" href="../js/bootstrap.min.js">
+    <link rel="stylesheet" href="../js/jquery-3.6.1.min.js">
+</head>
+<style>
+    [class*="col-"] {
+        padding-left: 0;
+        padding-right: 0;
+    }
+</style>
+<script>
+    // $(document).ready(function(){
+    //     var
+    // }) 
+    $(document).ready(function () {
+        var i =2 ;
+        $("#btnDK").click(function () { 
+           $("#myModal").modal();
+            
+        })
+        
+        function kiemTraMa(){
+            var mauKT = /[0-9]{9}$/;
+            if (mauKT.test($("#txtMa").val()) == true){
+                alert("Nhập đúng")
+                return true;
+            }
+            else {
+                alert("Nhập sai");
+                return false;
+            }
+        }
+    });
+</script>
+<body>
+    <div class="container border">
+        <div class="row">
+            <div class="col-12">
+                <img src=".../1.PNG" alt="" width="100%" height="150px">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <ul class="navbar nav-bar-nav navbar-expand-md">
+                    <li class="nav-item"><a href="#" class="nav-link">Đăng nhập</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" id="btnDK">Đăng kí</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+                <img src=".../2.PNG" alt="">
+            </div>
+            <div class="col-md-7">
+                <table class="table-bordered table-light table-primary table-hover table table-striped ">
+                    <tr>
+                        <th>STT</th>
+                        <th>MÃ SINH VIÊN</th>
+                        <th>HỌ TÊN</th>
+                        <th>ĐỊA CHỈ</th>
+                        <th>TIỀN DỊCH VỤ</th>
+                        <th>TIỀN TRANG PHỤC</th>
+                        <th>THÀNH TIỀN</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>123456789</td>
+                        <td>TRAN ANH</td>
+                        <td>QUANG NGAI</td>
+                        <td>3000</td>
+                        <td>1000</td>
+                        <td>40000</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="modal fade" id="myModal" >
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5>MODAL VALIDATION</h5>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-control">
+                                <div class="row">
+                                    <div class="col-6 col-sm-3">
+                                        <label for="">Mã khách hàng</label>
+                                    </div>
+                                    <div class="col-6 col-sm-9">
+                                        <input type="text" name="" id="" class="form-control"
+                                        placeholder="Nhập mã khách hàng" id="txtMa">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-6 col-sm-3">
+                                        <label for="">Họ tên</label>
+                                    </div>
+                                    <div class="col-6 col-sm-9">
+                                        <input type="text" name="" id="" class="form-control"
+                                        placeholder="Nhập họ tên" id="txtHT">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 col-sm-12">
+                                        <span id="tbTen">*</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 col-sm-3">
+                                        <label for=""> Địa chỉ</label>
+                                    </div>
+                                    <div class="col-6 col-sm-9">
+                                        <input type="text" name="" id="" class="form-control"
+                                        placeholder="Nhập địa chỉ" id="txtDC">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 col-sm-12">
+                                        <span id="tbDC">*</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4 col-sm-3">
+                                        <label for="">Dịch vụ</label>
+                                    </div>
+                                    <div class="col-6 col-sm-9">
+                                        <select name="gia" id="slGia" class="form-control">
+                                            <option value="2000">Boi</option>
+                                            <option value="3000">Game</option>
+                                            <option value="5000">Nuoc</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-4 col-sm-3">
+                                        <label for="">Giá</label>
+                                    </div>
+                                    <div class="col-6 col-sm-9">
+                                        <input name="txtDV" type="text" class="form-control" id="txtDV" disabled >
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-4 col-sm-3">
+                                        <label for="">Đồ dùng</label>
+                                    </div>
+                                    <div class="col-6 col-sm-9">
+                                        <input type="checkbox" name="chkDodung" class="chkDodung" value="20000"> Áo quần bơi
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4 col-sm-3">
+                                        <label for=""></label>
+                                    </div>
+                                    <div class="col-6 col-sm-9">
+                                        <input type="checkbox" name="chkDodung" class="chkDodung" value="50000"> Phao
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4 col-sm-3">
+                                        <label for=""></label>
+                                    </div>
+                                    <div class="col-6 col-sm-9">
+                                        <input type="checkbox" name="chkDodung" class="chkDodung" value="70000"> Kinh bơi
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-4 col-sm-3">
+                                        <label for="">Thành tiền</label>
+                                    </div>
+                                    <div class="col-6 col-sm-9">
+                                        <input type="text" name="txtDD" id="txtDD" class="form-control" value="0" disabled>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-4 col-sm-3">
+                                        <label for="">Giảm trừ</label>
+                                    </div>
+                                    <div class="col-6 col-sm-9">
+                                        <input type="radio" name="giam" value="7000" id=""> Ngày thường
+                                        <input type="radio" name="giam" value="10000" id=""> Cuối tuần
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-4 col-sm-3">
+                                        <label for="">Tổng tiền</label>
+                                    </div>
+                                    <div class="col-6 col-sm-9">
+                                        <input type="text" name="txtTong" id="txtTong" class="form-control" disabled>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <input type="button" value="Submit" id="btnSave" class="btn btn-success btn-block">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="reset" value="reset" class="btn btn-danger btn-block">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <h4>CHUONG TRINH</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+>>>>>>> 8ed2af7 (thuong ki 21/4/2023)
+</body>
+</html>
